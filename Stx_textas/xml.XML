@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://www.w3.org/2003/05/soap-envelope"
+                   xmlns:SOAP-ENC="http://www.w3.org/2003/05/soap-encoding"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                   xmlns:wsa5="http://schemas.xmlsoap.org/ws/2004/08/addressing"
+                   xmlns:c14n="http://www.w3.org/2001/10/xml-exc-c14n#"
+                   xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+                   xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing"
+                   xmlns:d="http://schemas.xmlsoap.org/ws/2005/04/discovery"
+                   xmlns:dn="http://www.onvif.org/ver10/network/wsdl">
+    <SOAP-ENV:Header>
+        <wsa5:MessageID>urn:uuid:5c1ca65a-7fac-49e4-ab23-95a81a4c7bc7</wsa5:MessageID>
+        <wsa5:RelatesTo>uuid:c662530d-1445-464a-95a8-73808841ebeb</wsa5:RelatesTo>
+        <wsa5:To SOAP-ENV:mustUnderstand="true">http://schemas.xmlsoap.org/ws/2004/08/addressing/role/anonymous
+        </wsa5:To>
+        <wsa5:Action SOAP-ENV:mustUnderstand="true">http://schemas.xmlsoap.org/ws/2005/04/discovery/ProbeMatches
+        </wsa5:Action>
+    </SOAP-ENV:Header>
+    <SOAP-ENV:Body>
+        <d:ProbeMatches>
+            <d:ProbeMatch>
+                <wsa:EndpointReference>
+                    <wsa:Address>urn:uuid:00000012-1787-49f8-ab4f-0050c273aeaf</wsa:Address>
+                </wsa:EndpointReference>
+                <d:Types>dn:NetworkVideoTransmitter</d:Types>
+                <d:Scopes>
+                    onvif://www.onvif.org/type/video_encoder
+                    onvif://www.onvif.org/type/audio_encoder
+                    onvif://www.onvif.org/type/ptz onvif://www.onvif.org/Profile/Streaming
+                    onvif://www.onvif.org/hardware/hisi onvif://www.onvif.org/mfr/ipcamera
+                    onvif://www.onvif.org/location/country/china onvif://www.onvif.org/location/city/tianjin
+                    onvif://www.onvif.org/mac onvif://www.onvif.org/firmware/APP_V3.0.0.20171216
+                    onvif://www.onvif.org/name/ipcamera
+                </d:Scopes>
+                <d:XAddrs>http://192.168.1.2:80/onvif/device_service</d:XAddrs>
+                <d:MetadataVersion>1</d:MetadataVersion>
+            </d:ProbeMatch>
+        </d:ProbeMatches>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

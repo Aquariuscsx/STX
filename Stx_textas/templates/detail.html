@@ -1,0 +1,20 @@
+<table border="0" width="100%">
+    <thead>
+    <tr class="s-odd">
+        <th width="10%">ID</th>
+        <th width="30%">IP</th>
+        <th width="50%">信息</th>
+        <th width="10%">批次</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for i in info %}
+    <tr class="s-even">
+        <td>{{ i.id }}</td>
+        <td>{{ i.ip }}</td>
+        <td>{{ i.info }}</td>
+        <td>{{ i.batch.id }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>

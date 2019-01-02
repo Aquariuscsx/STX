@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+
+{% block main %}
+
+
+<!--配置开始-->
+<div class="c-block">
+    <form id="config_form">
+        <div class="v-form-block">
+
+            <!--插件配置-->
+            <h2>插件配置</h2>
+            <div class="v-form-group">
+                <label>Hikvision端口</label>
+                <input type="text" placeholder="请输入配置信息" name="hikvision_camera_port" value="{{hikvision_camera_port.value}}">
+            </div>
+            <div class="v-form-group">
+                <label>Hikvision数据切片</label>
+                <input type="text" placeholder="请输入配置信息" name="hikvision_camera_slice" value="{{hikvision_camera_slice.value}}">
+            </div>
+
+            <div class="v-form-group">
+                <label>科达插件端口</label>
+                <input type="text" placeholder="请输入配置信息" name="keda_camera_port" value="{{keda_camera_port.value}}">
+            </div>
+
+            <div class="v-form-group">
+                <label>大华插件端口</label>
+                <input type="text" placeholder="请输入配置信息" name="dahua_camera_port" value="{{dahua_camera_port.value}}">
+            </div>
+
+            <!--平台配置-->
+            <h2>平台配置</h2>
+            <div class="v-form-group">
+                <label>扫描端口</label>
+                <input type="text" placeholder="请输入配置信息" name="port_list" value="{{ port_list.value }}">
+            </div>
+            <div class="v-form-group">
+                <label>扫描线程数</label>
+                <input type="text" placeholder="请输入配置信息" name="thread_num" value="{{thread_num.value }}">
+            </div>
+
+            <div class="v-form-group">
+                <label>接收数据大小</label>
+                <input type="text" placeholder="请输入配置信息" name="recv_num" value="{{recv_num.value }}">
+            </div>
+
+            <!--提交按钮-->
+            <div class="v-form-group">
+                <label></label>
+                <span class="c-btn v-gra" id="config_but">提交</span>
+            </div>
+
+        </div>
+    </form>
+</div>
+<!--配置结束-->
+
+
+<script src="../static/js/base.js"></script>
+<script>
+
+    $("#config_but").click(function(){
+        $.ajax({
+            async:false,
+            type: "POST",
+            url:'/config/',
+            data: $('#config_form').serialize(),
+            success:function(data){
+                alert("配置已修改")
+            },
+            error: function(data) {
+                alert(data);
+            }
+        })
+    })
+
+
+
+</script>
+
+{% endblock %}

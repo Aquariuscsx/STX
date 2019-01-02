@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+
+{% block main %}
+
+<!--正在扫描开始-->
+<div class="b-block">
+    <div class="b-cur">
+        <div class="b-md">
+            <div class="b-cur-lf">
+                <img src="../static/images/b-h.png">
+            </div>
+            <div class="b-cur-md"></div>
+            <div class="b-cur-rt">
+                <div class="b-btn v-gra"><a href="/scan/">取消</a></div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="b-bar">
+        <div class="b-bar-cur" style="width: 0"></div>
+        <div class="b-text">
+            <span>当前进度为：</span>
+            <span class="pro-speed">0%</span>
+        </div>
+    </div>
+    <div class="b-result">
+        
+
+        <!--<div class="b-result-each">扫描结果：XXXXX</div>-->
+        <!--<div class="b-result-each">扫描结果：XXXXX</div>-->
+        
+    </div>
+</div>
+<!--正在扫描结束-->
+
+<script>
+
+    //进度条
+    var process = function (num) {
+        $(".pro-speed").text(num+"%");
+        $(".b-bar-cur").animate({width:num+"%"})
+    };
+
+    //模拟进度
+    setInterval(function () {
+        $.ajax({
+            type: "post",
+            url: "/progress_bar/",
+            heads : {
+                'content-type' : 'application/x-www-form-urlencoded'
+            },
+            success: function (data) {
+                data1=JSON.parse(data);
+                process(data1.progress);
+                var str="";
+                $.each(data1.info,function (index,value) {
+                    str=str+'<div class="b-result-each">扫描结果：'+value.ip+':'+value.info+'</div>'
+                });
+                $(".b-result").html(str);
+                $(".b-cur-md").text("当前扫描到："+data1.total+"条数据！");
+                if(data1.progress==100){
+                    $(".b-cur-lf img").attr("src","../static/images/e-h.png");
+                    $(".v-gra").html('<a href="/scan/">返回</a>')
+                }
+
+            }
+        });
+    },1000);
+
+
+</script>
+
+<script src="../static/js/base.js"></script>
+
+{% endblock %}

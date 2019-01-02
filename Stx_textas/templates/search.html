@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+
+{% block main %}
+
+
+<!--查询开始-->
+<div class="s-block">
+    <div class="s-search">
+        <input type="text" id="searchKey" name="q" placeholder="请输入查询关键字">
+        <div class="s-btn v-gra" onclick="searchBtn()">查询</div>
+        <div class="clearfix"></div>
+    </div>
+
+    <div class="s-table"></div>
+
+</div>
+<!--查询结束-->
+
+<script src="../static/js/base.js"></script>
+<script>
+
+    function searchBtn(){
+        $.ajax({
+            type: "post",
+            url: "/search/",
+            data: {"q": $("#searchKey").val()},
+            success: function (data) {
+                $(".s-table").html(data);
+            }
+        })
+    }
+
+
+</script>
+
+
+{% endblock %}

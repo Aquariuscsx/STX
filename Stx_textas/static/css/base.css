@@ -1,0 +1,316 @@
+html,body,ul,li{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: url("../images/bg.jpg") no-repeat fixed;
+    width: 100%;
+    min-width: 1300px;
+}
+ul,li{
+    list-style: none;
+}
+.clearfix{
+    clear: both;
+}
+
+/*导航*/
+.nav{
+    width: 100%;
+    height: 64px;
+    background: url("../images/nav.png") no-repeat;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    min-width: 1300px;
+}
+@font-face {
+    font-family: 'mijyl';
+    src: url("../fonts/迷你简圆立.woff");
+}
+.nav-lf{
+    float: left;
+    font-family:mijyl;
+    font-size: 42px;
+    width: 680px;
+    height: 64px;
+    padding-left: 50px;
+    line-height: 64px;
+    color: #75fefc;
+    letter-spacing: 30px;
+}
+.nav-rt{
+    margin-left: 680px;
+}
+.nav-rt ul li{
+    font-size: 24px;
+    color: #2ac2c0;
+    float: left;
+    line-height: 64px;
+    padding: 0 20px;
+    cursor: pointer;
+}
+.nav-rt ul li.menu-active{
+    color: #75fefc;
+    background: -webkit-linear-gradient(#0a9da4, #043e42); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#0a9da4, #043e42); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#0a9da4, #043e42); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#0a9da4, #043e42); /* 标准的语法 */
+}
+
+/*扫描开始*/
+.con{
+    width: 1568px;
+    margin:124px auto 0;
+}
+.con-lf{
+    float: left;
+    width:784px;
+    height: 700px;
+}
+.con-lf>div{
+    margin-left: auto;
+    margin-right: auto;
+}
+.con-lf-t{
+    width: 100%;
+    height: 34px;
+}
+.con-lf-gif{
+    width:524px;
+    height: 508px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.con-lf-l{
+    width:278px;
+    height: 11px;
+}
+.con-rt{
+    margin-left: 784px;
+    width:703px;
+    height: 700px;
+    background: url("../images/s-f.png") no-repeat;
+}
+.v-form-block{
+    padding-top: 150px;
+}
+.v-form-group{
+    padding: 20px;
+    margin-left: 60px;
+}
+.v-form-group label{
+    display: inline-block;
+    color: #64a3e1;
+    font-size: 24px;
+    width: 60px;
+}
+.v-form-group select,.v-form-group input{
+    border: solid 1px #64a3e1;
+    width: 400px;
+    height: 50px;
+    background-color: transparent!important;
+    color:#64a3e1;
+    font-size:20px;
+    padding-left: 10px;
+}
+.v-form-group .v-btn{
+    display: inline-block;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 26px;
+}
+.v-gra{
+    color: #19f4ff;
+    text-align: center;
+    cursor: pointer;
+    border: solid 2px #123f4c;
+    background: -webkit-linear-gradient(#113c48, #04191f,#113c48); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#113c48, #04191f,#113c48); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#113c48, #04191f,#113c48); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#113c48, #04191f,#113c48); /* 标准的语法（必须放在最后） */
+}
+
+/*chosen*/
+.chosen-container{
+    width: 412px!important;
+    height: 54px!important;
+}
+.chosen-container-multi .chosen-choices{
+    height: 54px!important;
+    background-color:transparent!important;
+    background-image: none!important;
+    border: solid 1px #64a3e1!important;
+}
+.chosen-container-multi .chosen-choices li.search-choice{
+    background-image: none!important;
+    background-color:#051920!important;
+    border: solid 1px #64a3e1!important;
+    color:#888888!important;
+}
+
+/*正在扫描*/
+.b-block{
+    margin: 94px 30px 30px;
+    border: solid 1px #01acd1;
+}
+.b-block .v-gra a{
+    color: #19f4ff!important;
+    text-decoration: none;
+}
+.b-cur{
+    background-color: rgba(3,36,43,0.5);
+    height: 160px;
+}
+.b-md{
+    padding: 30px 50px;
+}
+.b-cur-lf{
+    float: left;
+}
+.b-cur-lf img{
+    width: 100px;
+    height: 100px;
+}
+.b-cur-md{
+    float: left;
+    padding-left: 20px;
+    line-height: 100px;
+    color: #dfe483;
+    font-size: 30px;
+}
+.b-cur-rt{
+    float: right;
+    height: 100px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.b-btn{
+    width: 100px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+}
+.b-bar{
+    width: 100%;
+    height: 24px;
+    background-color: #06151a;
+    position: relative;
+}
+.b-bar .b-bar-cur{
+    height: 24px;
+    background-color: #01acd1;
+}
+.b-bar .b-text{
+    position: absolute;
+    top: 0;
+    left: 44%;
+    color: white;
+    line-height: 24px;
+}
+.b-result .b-result-each{
+    line-height: 60px;
+    color: #19f4ff;
+    font-size: 26px;
+    padding-left: 50px;
+    border-bottom: solid 1px #0f252c;
+    word-break:break-all;
+}
+
+/*查询*/
+.s-block{
+    margin: 124px 30px 30px;
+}
+.s-search{
+    padding-left: 20%;
+}
+.s-search input{
+    float: left;
+    width: 60%;
+    height: 70px;
+    outline:none;
+    background-color: #03242b;
+    border: solid 1px #1d8ba3;
+    color: #64a3e1;
+    font-size: 20px;
+    padding-left: 20px;
+}
+.s-search .s-btn{
+    margin-left: 60%;
+    width: 150px;
+    height: 70px;
+    line-height: 70px;
+    font-size: 30px;
+}
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+     color: #64a3e1;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+     color: #64a3e1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+     color: #64a3e1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+     color: #64a3e1;
+}
+.s-table{
+    margin-top: 50px;
+}
+.s-table thead tr{
+    color:#66e0df;
+    font-size: 20px;
+}
+.s-table tbody tr{
+    color:#bcfffe;
+    font-size: 20px;
+}
+.s-table tr{
+    height: 50px;
+}
+.s-table tr.s-odd{
+    background-color: rgba(15,72,84,0.5);
+}
+.s-table tr.s-even{
+    background-color: rgba(15,72,84,0.1);
+}
+.s-table thead tr th,.s-table tbody tr td{
+    text-align: center;
+}
+
+
+/*配置*/
+.c-block{
+    margin: 94px 50px 30px;
+    background: url("../images/c-b.png") no-repeat ;
+    background-size:100% 100% ;
+    min-height: 810px;
+}
+.v-form-block h2{
+    margin-left: 80px;
+    color: #19f4ff;
+    letter-spacing: 14px;
+}
+.v-form-group .c-btn{
+    display: inline-block;
+    width: 120px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 26px;
+}
+.c-block .v-form-group label{
+    width: 100px;
+    text-align: right;
+    padding-right: 20px;
+}
+.c-block .v-form-group input{
+    width: 60%;
+}
+.c-block .v-form-block{
+    padding-top: 70px;
+    padding-bottom: 90px;
+}
+

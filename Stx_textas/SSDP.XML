@@ -1,0 +1,80 @@
+<!--<This XML file does not appear to have any style information associated with it. The document tree is shown below.></This>-->
+<root xmlns="urn:schemas-upnp-org:device-1-0" configId="1337">
+<specVersion>
+<major>1</major>
+<minor>1</minor>
+</specVersion>
+<device>
+<deviceType>
+urn:schemas-upnp-org:device:InternetGatewayDevice:1
+</deviceType>
+<friendlyName>MiWiFi router</friendlyName>
+<manufacturer>Xiaomi</manufacturer>
+<manufacturerURL>http://www.mi.com</manufacturerURL>
+<modelDescription>MiWiFi Router</modelDescription>
+<modelName>MiWiFi Router</modelName>
+<modelURL>http://www1.miwifi.com</modelURL>
+<serialNumber>00000000</serialNumber>
+<UDN>uuid:976fbc1e-c431-45ac-a84b-766124e60e69</UDN>
+<serviceList>
+<service>
+<serviceType>urn:schemas-upnp-org:service:Layer3Forwarding:1</serviceType>
+<serviceId>urn:upnp-org:serviceId:L3Forwarding1</serviceId>
+<SCPDURL>/L3F.xml</SCPDURL>
+<controlURL>/ctl/L3F</controlURL>
+<eventSubURL>/evt/L3F</eventSubURL>
+</service>
+</serviceList>
+<deviceList>
+<device>
+<deviceType>urn:schemas-upnp-org:device:WANDevice:1</deviceType>
+<friendlyName>WANDevice</friendlyName>
+<manufacturer>MiniUPnP</manufacturer>
+<manufacturerURL>http://miniupnp.free.fr/</manufacturerURL>
+<modelDescription>WAN Device</modelDescription>
+<modelName>WAN Device</modelName>
+<modelNumber>20181109</modelNumber>
+<modelURL>http://miniupnp.free.fr/</modelURL>
+<serialNumber>00000000</serialNumber>
+<UDN>uuid:976fbc1e-c431-45ac-a84b-766124e60e6a</UDN>
+<UPC>000000000000</UPC>
+<serviceList>
+<service>
+<serviceType>
+urn:schemas-upnp-org:service:WANCommonInterfaceConfig:1
+</serviceType>
+<serviceId>urn:upnp-org:serviceId:WANCommonIFC1</serviceId>
+<SCPDURL>/WANCfg.xml</SCPDURL>
+<controlURL>/ctl/CmnIfCfg</controlURL>
+<eventSubURL>/evt/CmnIfCfg</eventSubURL>
+</service>
+</serviceList>
+<deviceList>
+<device>
+<deviceType>urn:schemas-upnp-org:device:WANConnectionDevice:1</deviceType>
+<friendlyName>WANConnectionDevice</friendlyName>
+<manufacturer>MiniUPnP</manufacturer>
+<manufacturerURL>http://miniupnp.free.fr/</manufacturerURL>
+<modelDescription>MiniUPnP daemon</modelDescription>
+<modelName>MiniUPnPd</modelName>
+<modelNumber>20181109</modelNumber>
+<modelURL>http://miniupnp.free.fr/</modelURL>
+<serialNumber>00000000</serialNumber>
+<UDN>uuid:976fbc1e-c431-45ac-a84b-766124e60e6b</UDN>
+<UPC>000000000000</UPC>
+<serviceList>
+<service>
+<serviceType>urn:schemas-upnp-org:service:WANIPConnection:1</serviceType>
+<serviceId>urn:upnp-org:serviceId:WANIPConn1</serviceId>
+<SCPDURL>/WANIPCn.xml</SCPDURL>
+<controlURL>/ctl/IPConn</controlURL>
+<eventSubURL>/evt/IPConn</eventSubURL>
+</service>
+</serviceList>
+</device>
+</deviceList>
+</device>
+</deviceList>
+<presentationURL>http://miwifi.com/</presentationURL>
+</device>
+</root>
